@@ -1,3 +1,4 @@
 /.vs
 /NotificationCollector/bin
 /NotificationCollector/obj
+/NotificationCollector/*.user
