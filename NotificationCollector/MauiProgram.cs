@@ -28,11 +28,6 @@ namespace NotificationCollector
 
       builder
         .UseMauiApp<App>()
-        .ConfigureFonts(fonts =>
-        {
-          fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-          fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
-        })
         .ConfigureLifecycleEvents(x =>
         {
           x.AddAndroid(y => y.OnPostCreate(OnPostCreate));
