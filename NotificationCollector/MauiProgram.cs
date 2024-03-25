@@ -63,7 +63,7 @@ namespace NotificationCollector
         .CreateLogger();
 
       builder.Services.AddLogging(x => x.AddSerilog(Log.Logger));
-      builder.Services.AddSingleton<HashAlgorithm>(MD5.Create());
+      builder.Services.AddSingleton<HashAlgorithm>(SHA256.Create());
       builder.Services.AddSingleton(CreateNotificationReceiverRestClient);
       builder.Services.AddSingleton<IDirectoryPathService>(new DirectoryPathService { DocumentsDirectoryPath = documentsDirectory.AbsolutePath });
       builder.Services.AddSingleton<INotificationRepository, NotificationRepository>();
